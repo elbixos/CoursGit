@@ -41,6 +41,9 @@ rectText.y = 10
 # servira a regler l'horloge du jeu
 horloge = pygame.time.Clock()
 
+
+vitesse = 10
+
 # la boucle dont on veut sortir :
 #   - en appuyant sur ESCAPE
 #   - en cliquant sur le bouton de fermeture
@@ -64,13 +67,13 @@ while continuer:
 
 
     if touches[pygame.K_LEFT] :
-        rectPerso.x -= 5
+        rectPerso.x -= vitesse
     if touches[pygame.K_RIGHT] :
-        rectPerso.x += 5
+        rectPerso.x += vitesse
     if touches[pygame.K_UP] :
-        rectPerso.y -= 5
+        rectPerso.y -= vitesse
     if touches[pygame.K_DOWN] :
-        rectPerso.y += 5
+        rectPerso.y += vitesse
 
     if rectPerso.x <0 :
         rectPerso.x = 0
