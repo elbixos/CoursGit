@@ -71,6 +71,15 @@ while continuer:
     if touches[pygame.K_DOWN] :
         rectPerso.y += 5
 
+    if rectPerso.x <0 :
+        rectPerso.x = 0
+    if rectPerso.x > largeur - rectPerso.w :
+        rectPerso.x = largeur - rectPerso.w
+    if rectPerso.y <0 :
+        rectPerso.y = 0
+    if rectPerso.y > hauteur - rectPerso.h :
+        rectPerso.y = hauteur - rectPerso.h
+
     # Affichage du fond
     fenetre.blit(imageFond, rectFond)
 
