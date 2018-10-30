@@ -1,5 +1,32 @@
 import pygame
 
+def deplacerPerso(touches, rectPerso, hauteur, largeur):
+    if touches[pygame.K_LEFT] :
+        rectPerso.x -= vitesse
+
+    if touches[pygame.K_RIGHT] :
+        rectPerso.x += vitesse
+
+    if touches[pygame.K_UP] :
+        rectPerso.y -= vitesse
+
+    if touches[pygame.K_DOWN] :
+        rectPerso.y += vitesse
+
+    if rectPerso.x <0 :
+        rectPerso.x = 0
+
+    if rectPerso.x > largeur - rectPerso.w :
+        rectPerso.x = largeur - rectPerso.w
+
+    if rectPerso.y <0 :
+        rectPerso.y = 0
+
+    if rectPerso.y > hauteur - rectPerso.h :
+        rectPerso.y = hauteur - rectPerso.h
+
+
+
 # Initialisation de la bibliotheque pygame
 pygame.init()
 
@@ -66,23 +93,7 @@ while continuer:
         continuer=0
 
 
-    if touches[pygame.K_LEFT] :
-        rectPerso.x -= vitesse
-    if touches[pygame.K_RIGHT] :
-        rectPerso.x += vitesse
-    if touches[pygame.K_UP] :
-        rectPerso.y -= vitesse
-    if touches[pygame.K_DOWN] :
-        rectPerso.y += vitesse
-
-    if rectPerso.x <0 :
-        rectPerso.x = 0
-    if rectPerso.x > largeur - rectPerso.w :
-        rectPerso.x = largeur - rectPerso.w
-    if rectPerso.y <0 :
-        rectPerso.y = 0
-    if rectPerso.y > hauteur - rectPerso.h :
-        rectPerso.y = hauteur - rectPerso.h
+    deplacerPerso(touches, rectPerso, hauteur, largeur)
 
     # Affichage du fond
     fenetre.blit(imageFond, rectFond)
