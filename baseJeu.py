@@ -1,6 +1,6 @@
 import pygame
 
-def deplacerPerso(touches, rectPerso, hauteur, largeur):
+def deplacerPerso(touches, rectPerso, hauteur, largeur, vitesse):
     if touches[pygame.K_LEFT] :
         rectPerso.x -= vitesse
 
@@ -69,7 +69,7 @@ rectText.y = 10
 horloge = pygame.time.Clock()
 
 
-vitesse = 10
+vitesse = 7
 
 # la boucle dont on veut sortir :
 #   - en appuyant sur ESCAPE
@@ -93,7 +93,7 @@ while continuer:
         continuer=0
 
 
-    deplacerPerso(touches, rectPerso, hauteur, largeur)
+    deplacerPerso(touches, rectPerso, hauteur, largeur,vitesse)
 
     # Affichage du fond
     fenetre.blit(imageFond, rectFond)
