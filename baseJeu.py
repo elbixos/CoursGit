@@ -64,13 +64,13 @@ while continuer:
 
 
     if touches[pygame.K_LEFT] :
-        rectPerso.x -= 5
+        rectPerso.x -= 7
     if touches[pygame.K_RIGHT] :
-        rectPerso.x += 5
+        rectPerso.x += 7
     if touches[pygame.K_UP] :
-        rectPerso.y -= 5
+        rectPerso.y -= 7
     if touches[pygame.K_DOWN] :
-        rectPerso.y += 5
+        rectPerso.y += 7
 
     if rectPerso.x <0 :
         rectPerso.x = 0
