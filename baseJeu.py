@@ -18,7 +18,7 @@ rectPerso.x = 60
 rectPerso.y = 80
 
 # lecture de l'image du fond
-imageFond = pygame.image.load("background.jpg").convert()
+imageFond = pygame.image.load("bullshit.jpg").convert()
 
 # creation d'un rectangle pour positioner l'image du fond
 rectFond = imageFond.get_rect()
